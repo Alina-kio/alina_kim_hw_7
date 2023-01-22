@@ -15,13 +15,13 @@ public class Medic extends Hero{
     }
 
     @Override
-    public String applySuperAbility() {
+    public String applySuperAbility(){
         return "Medic применил " + "суперспособность " + getAttackType() +
-                "\nHeal Points: " + increaseExperience();
+                "\nHeal Points: " + (int) increaseExperience();
     }
 
 
-    public int increaseExperience(){
+    public double increaseExperience(){
         return getHealPoints() + (getHealPoints() * 10 / 100);
     }
 }
